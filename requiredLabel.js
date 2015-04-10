@@ -4,7 +4,7 @@ define(['jquery', 'knockout'],
             init: function (element, valueAccessor) {
                 // Initially create the required element next to the label
                 var valUnwraped = ko.unwrap(valueAccessor()),
-                    requiredColor = ko.unwrap(valUnwraped.color) || 'blue',                    
+                    requiredColor = ko.unwrap(valUnwraped.color) || 'red',                    
                     $scopedCSS = $("<style scoped>" +
                                         ".requiredLabel-icon-container { " +
                                             "display: inline-block;" +
