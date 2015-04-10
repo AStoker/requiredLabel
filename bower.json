@@ -1,0 +1,31 @@
+{
+  "name": "requiredLabel",
+  "main": "requiredLabel.js",
+  "version": "0.0.0",
+  "homepage": "https://github.com/AStoker/requiredLabel",
+  "description": "A knockout binding to use on labels to indicate whether they are required, and whether the input they are for has been filled",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "knockout",
+    "jquery",
+    "required",
+    "indicator"
+  ],
+  "authors": [
+    "Andrew Stoker"
+  ],
+  "license": "GNU v2.0",
+  "dependencies": {
+	"knockout": ">=3.0",
+	"jquery": ">=1.6"  
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
