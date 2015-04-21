@@ -6,12 +6,10 @@ define(['jquery', 'knockout'],
                 var valUnwraped = ko.unwrap(valueAccessor()),
                     requiredColor = ko.unwrap(valUnwraped.color) || 'red',                   
                     
-					$requiredStateElem = $("<div data-requiredLabel='iconState' style='display: inline-block; color: "+requiredColor+"; margin-left: 5px; font-weight: bold; height: .8em; width: .8em;'>&#42;</div>").data('requiredLabel', $(element));
-                //$wrappedLabelText = $("<span style='display: inline-block;'>"+$(element).html().trim()+"</span>");
+					$requiredStateElem = $("<div title='Required' data-requiredLabel='iconState' style='display: inline-block; color: "+requiredColor+"; margin-left: 5px; font-weight: bold; height: .8em; width: .8em;'>&#42;</div>").data('requiredLabelOriginator', $(element));
 
                 $(element).after($requiredStateElem);
 
-                $(element).attr("title", "Required");
             },
             update: function (element, valueAccessor) {
                 // Whenever the value subsequently changes (including on first render/after init)
