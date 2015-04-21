@@ -6,7 +6,7 @@ define(['jquery', 'knockout'],
                 var valUnwraped = ko.unwrap(valueAccessor()),
                     requiredColor = ko.unwrap(valUnwraped.color) || 'red',                   
                     
-					$requiredStateElem = $("<div title='Required' data-requiredLabel='iconState' style='display: inline-block; color: "+requiredColor+"; margin-left: 5px; font-weight: bold; height: .8em; width: .8em;'>&#42;</div>").data('requiredLabelOriginator', $(element));
+					$requiredStateElem = $("<div title='Required' data-requiredLabel='iconState' style='display: inline-block; color: "+requiredColor+"; margin-left: 4px; font-weight: bold; height: .8em; width: .8em;'>&#42;</div>").data('requiredLabelOriginator', $(element));
 
                 $(element).after($requiredStateElem);
 
