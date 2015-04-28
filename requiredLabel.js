@@ -25,18 +25,7 @@ define(['jquery', 'knockout'],
                     $elementState = $(element).find("[data-requiredLabel='iconState']"),
                     visibilityTransitionFunc = valUnwraped.visibilityTransition;          
 
-				if($.isFunction(visibilityTransitionFunc)){
-					visibilityTransitionFunc($elementState[0]);
-				}  else {
-					if(isRequired == null || isRequired == true){ //If null or true
-		                $elementState.css({"display": "inline-block"});
-	                } else { //if false
-		                $elementState.css({"display": "none"});
-	                }
-				}                        
-                
-                
-                if (!completedState) {
+				if (!completedState) {
                     $elementState.html("&#42;");
                 } else {
                     $elementState.html("<svg style='fill: green; width: 100%; height: 100%;' viewBox='0 0 500 500'>"+
@@ -46,6 +35,21 @@ define(['jquery', 'knockout'],
                         "c24.6-34.6,95-144.8,119.6-180.1c8-11.3,13.3-12,23.9-4c5.3,3.3,10,7.3,15.3,10.6C389.7,121.9,391,127.9,385,136.5z' />"+
                     "</svg>");
                 }
+
+				if(isRequired == null || isRequired == true){ //If null or true
+					if($.isFunction(visibilityTransitionFunc)){
+						visibilityTransitionFunc($elementState[0]);
+					}
+					$elementState.css({"display": "inline-block"});
+                } else { //if false
+	                if($.isFunction(visibilityTransitionFunc)){
+						visibilityTransitionFunc($elementState[0]);
+					}
+		            $elementState.css({"display": "none"});
+                }               
+				                    
+                                
+                
             }
         };
     });
