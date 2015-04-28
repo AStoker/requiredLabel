@@ -1,7 +1,7 @@
 {
   "name": "requiredLabel",
   "main": "requiredLabel.js",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "homepage": "https://github.com/AStoker/requiredLabel",
   "description": "A knockout binding to use on labels to indicate whether they are required, and whether the input they are for has been filled",
   "moduleType": [
